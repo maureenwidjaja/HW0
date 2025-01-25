@@ -9,43 +9,43 @@
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
-    "title": "Creating posts",
+    "title": "Palmer Penguins Data Set Visualization",
     "section": "",
-    "text": "To do this, we need several steps: 1. Import necessary libraries 2. Load data into Python 3. Separate data into X and Y 4. Visualize data using Scatterplot\n\n\nThe pandas library is primarily used for data manipulation and analysis, while the matplotlib library works well with NumPy and Pandas to visualize data directly. Run the cell below to load the penguin dataset as a pandas DataFrame called penguins.\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\n\n\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\nAfter loading the data, we want to check that our data was read in correctly. To do this and to see what the dataset looks like, run the next cell. We use the head() function to show the first several lines incase the data set is very long.\npenguins.head()\n\n\n\nSince we wish to create a scatter plot to model the penguin’s Culmen Length vs Culmen Depth, we need to separate which column is going to be in the x-axis and y-axis.\nX = penguins[\"Culmen Length (mm)\"]\ny = penguins[\"Culmen Depth (mm)\"]\n\n\n\n\n\n\nalt text\n\n\n\nA bird (probably not a penguin) getting its culmen length measured\n\n\n(Source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MeasureBeakThrush.jpg/960px-MeasureBeakThrush.jpg)\n\nFirst let us create an empty figure and label the axes. We want to turn the plot into a scatterplot of the penguin’s culmen length against culmen depth.\nfig, ax = plt.subplots(1)\nax.set(xlabel = \"Culmen Length (mm)\", \n       ylabel = \"Culmen Depth (mm)\",\n       title = \"Culmen Length vs Culmen Depth\")\nOur point in our scatterplot corresponds to one penguin’s culmen length and depth. To create the scatter plot, we will extract the unique species names from the Species column of the penguins data frame and ensure that each species appears only once by using the set function. We then iterate through through each unique species using a for loop.\nIn the scatter function, we then pass a short name for each species to an argument named label and a value of 0.5 for an argument named alpha which makes the points translucent. Run the cell code below.\nspecies = set(penguins[\"Species\"])\nfor s in species:\n    sub = penguins[penguins[\"Species\"] == s]\n    ax.scatter(sub[\"Culmen Length (mm)\"], sub[\"Culmen Depth (mm)\"], label = s.split(' ')[0], alpha = 0.5)\nFinally, run the next cell to add a legend and show our scatterplot. The plot will show different colors for different species.\nax.legend()\nfig\nCongrats! You have just made your first scatterplot!"
+    "text": "To do this, we need several steps:"
   },
   {
     "objectID": "posts/index.html#step-1-import-necessary-libraries",
     "href": "posts/index.html#step-1-import-necessary-libraries",
-    "title": "Creating posts",
-    "section": "",
-    "text": "The pandas library is primarily used for data manipulation and analysis, while the matplotlib library works well with NumPy and Pandas to visualize data directly. Run the cell below to load the penguin dataset as a pandas DataFrame called penguins.\nimport pandas as pd\nimport matplotlib.pyplot as plt"
+    "title": "Palmer Penguins Data Set Visualization",
+    "section": "Step 1: Import necessary libraries",
+    "text": "Step 1: Import necessary libraries\nThe pandas library is primarily used for data manipulation and analysis, while the matplotlib library works well with NumPy and Pandas to visualize data directly. Run the cell below to load the penguin dataset as a pandas DataFrame called penguins.\nimport pandas as pd\nimport matplotlib.pyplot as plt"
   },
   {
     "objectID": "posts/index.html#step-2-load-data-into-python",
     "href": "posts/index.html#step-2-load-data-into-python",
-    "title": "Creating posts",
-    "section": "",
-    "text": "url = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\nAfter loading the data, we want to check that our data was read in correctly. To do this and to see what the dataset looks like, run the next cell. We use the head() function to show the first several lines incase the data set is very long.\npenguins.head()"
+    "title": "Palmer Penguins Data Set Visualization",
+    "section": "Step 2: Load data into Python",
+    "text": "Step 2: Load data into Python\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\nAfter loading the data, we want to check that our data was read in correctly. To do this and to see what the dataset looks like, run the next cell. We use the head() function to show the first several lines incase the data set is very long.\npenguins.head()"
   },
   {
     "objectID": "posts/index.html#step-3-separate-data-into-x-and-y",
     "href": "posts/index.html#step-3-separate-data-into-x-and-y",
-    "title": "Creating posts",
-    "section": "",
-    "text": "Since we wish to create a scatter plot to model the penguin’s Culmen Length vs Culmen Depth, we need to separate which column is going to be in the x-axis and y-axis.\nX = penguins[\"Culmen Length (mm)\"]\ny = penguins[\"Culmen Depth (mm)\"]"
+    "title": "Palmer Penguins Data Set Visualization",
+    "section": "Step 3: Separate data into X and Y",
+    "text": "Step 3: Separate data into X and Y\nSince we wish to create a scatter plot to model the penguin’s Culmen Length vs Culmen Depth, we need to separate which column is going to be in the x-axis and y-axis.\nX = penguins[\"Culmen Length (mm)\"]\ny = penguins[\"Culmen Depth (mm)\"]"
   },
   {
     "objectID": "posts/index.html#step-4-visualize-data-using-scatterplot",
     "href": "posts/index.html#step-4-visualize-data-using-scatterplot",
-    "title": "Creating posts",
-    "section": "",
-    "text": "alt text\n\n\n\nA bird (probably not a penguin) getting its culmen length measured\n\n\n(Source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MeasureBeakThrush.jpg/960px-MeasureBeakThrush.jpg)\n\nFirst let us create an empty figure and label the axes. We want to turn the plot into a scatterplot of the penguin’s culmen length against culmen depth.\nfig, ax = plt.subplots(1)\nax.set(xlabel = \"Culmen Length (mm)\", \n       ylabel = \"Culmen Depth (mm)\",\n       title = \"Culmen Length vs Culmen Depth\")\nOur point in our scatterplot corresponds to one penguin’s culmen length and depth. To create the scatter plot, we will extract the unique species names from the Species column of the penguins data frame and ensure that each species appears only once by using the set function. We then iterate through through each unique species using a for loop.\nIn the scatter function, we then pass a short name for each species to an argument named label and a value of 0.5 for an argument named alpha which makes the points translucent. Run the cell code below.\nspecies = set(penguins[\"Species\"])\nfor s in species:\n    sub = penguins[penguins[\"Species\"] == s]\n    ax.scatter(sub[\"Culmen Length (mm)\"], sub[\"Culmen Depth (mm)\"], label = s.split(' ')[0], alpha = 0.5)\nFinally, run the next cell to add a legend and show our scatterplot. The plot will show different colors for different species.\nax.legend()\nfig\nCongrats! You have just made your first scatterplot!"
+    "title": "Palmer Penguins Data Set Visualization",
+    "section": "Step 4: Visualize data using Scatterplot",
+    "text": "Step 4: Visualize data using Scatterplot\n\n\n\nalt text\n\n\n\nA bird (probably not a penguin) getting its culmen length measured\n\n\n(Source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MeasureBeakThrush.jpg/960px-MeasureBeakThrush.jpg)\n\nFirst let us create an empty figure and label the axes. We want to turn the plot into a scatterplot of the penguin’s culmen length against culmen depth.\nfig, ax = plt.subplots(1)\nax.set(xlabel = \"Culmen Length (mm)\", \n       ylabel = \"Culmen Depth (mm)\",\n       title = \"Culmen Length vs Culmen Depth\")\nOur point in our scatterplot corresponds to one penguin’s culmen length and depth. To create the scatter plot, we will extract the unique species names from the Species column of the penguins data frame and ensure that each species appears only once by using the set function. We then iterate through through each unique species using a for loop.\nIn the scatter function, we then pass a short name for each species to an argument named label and a value of 0.5 for an argument named alpha which makes the points translucent. Run the cell code below.\nspecies = set(penguins[\"Species\"])\nfor s in species:\n    sub = penguins[penguins[\"Species\"] == s]\n    ax.scatter(sub[\"Culmen Length (mm)\"], sub[\"Culmen Depth (mm)\"], label = s.split(' ')[0], alpha = 0.5)\nFinally, run the next cell to add a legend and show our scatterplot. The plot will show different colors for different species.\nax.legend()\nfig\nCongrats! You have just made your first scatterplot!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Maureen’s Palmer Penguins Blog",
+    "title": "Tutorial Blog of Data visualization for The Palmer Penguins Data Set",
     "section": "",
-    "text": "Creating posts\n\n\n\n\n\n\nWeek 3\n\n\nHW0\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\nNo matching items"
+    "text": "Palmer Penguins Data Set Visualization\n\n\n\n\n\n\nWeek 3\n\n\nHW0\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\nNo matching items"
   }
 ]
