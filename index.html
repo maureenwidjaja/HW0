@@ -191,7 +191,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="SFcw">HW0 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2VlayUyMDM=">Week 3 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -205,7 +205,37 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1737705600000" data-listing-file-modified-sort="1737746263125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1737782226784" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
+<div class="thumbnail">
+<p><a href="./posts/hw0.html" class="no-external"></a></p><a href="./posts/hw0.html" class="no-external">
+<p class="card-img-top"><img src="posts/hw0_files/figure-html/cell-6-output-2.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/hw0.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/hw0.html" class="no-external">PIC 16B, HW0</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/hw0.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./posts/hw0.html" class="no-external">
+
+<div id="104e437b-543e-4098-a081-daf90f68e63a" class="cell" data-execution_count="94">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="97b6f77b-34c1-43f2-987e-113f2792659d" class="cell" data-execution_count="96">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv"</span></span>
+<span id="cb2-2">penguins <span class="op">=</span> pd.read_csv(ur…</span></code></pre></div></div><div id="61e12d74-64e2-49ee-908b-378d9959e41e" class="cell" data-execution_count="69"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="69"><div><table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1"><thead><tr class="header"><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th><th data-quarto-table-cell-role="th"></th></tr></thead><tbody><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="even"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="even"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="odd"><td data-quarto-table-cell-role="th"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div></div><div class="quarto-figure quarto-figure-center"><figure class="figure"><p></p><figcaption></figcaption></figure></div><center><i></i></center><center><i></i></center><div id="c147a18b-034a-4c53-9c3f-a4cc51869be9" class="cell" data-execution_count="71"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="op"></span><span class="st"></span></span><span id="cb4-2"><span class="op"></span><span class="st"></span></span></code></pre></div></div><div id="c25de2e6-2d8f-45a5-8b8c-1b43874a29d9" class="cell" data-execution_count="126"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="op"></span><span class="dv"></span></span><span id="cb5-2"><span class="bu"></span><span class="op"></span><span class="st"></span></span><span id="cb5-3"><span class="op"></span><span class="st"></span></span><span id="cb5-4"><span class="op"></span><span class="st"></span></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="126"><pre><code></code></pre></div><div class="cell-output cell-output-display"><div><figure class="figure"><p></p></figure></div></div></div><div id="31e2bfb3-acaa-4657-8a9e-116264bdbf68" class="cell" data-execution_count="137"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="op"></span><span class="bu"></span><span class="st"></span></span><span id="cb7-2"><span class="cf"></span><span class="kw"></span></span><span id="cb7-3"><span class="op"></span><span class="st"></span><span class="op"></span></span><span id="cb7-4"><span class="st"></span><span class="st"></span><span class="op"></span><span class="st"></span><span class="dv"></span><span class="op"></span><span class="fl"></span></span></code></pre></div></div><div id="76cb7222-f5f8-450f-abb4-4075455debdf" class="cell" data-execution_count="139"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"></span><span id="cb8-2"></span></code></pre></div><div class="cell-output cell-output-display" data-execution_count="139"><div><figure class="figure"><p></p></figure></div></div></div></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./posts/hw0.html" class="no-external"></a></p><a href="./posts/hw0.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1737705600000" data-listing-file-modified-sort="1737746263125" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <div class="thumbnail">
 <p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
 <p><img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
@@ -244,18 +274,54 @@ Harlow Malloc
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cw==" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1737746263124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="quarto-post image-right" data-index="2" data-categories="V2VlayUyMDMlMkNIVzA=" data-listing-date-sort="1737705600000" data-listing-file-modified-sort="1737782232069" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="407">
 <div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
+<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
+<a href="./posts/index.html" class="no-external">Creating posts</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
+<a href="./posts/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('V2VlayUyMDM='); return false;">
+Week 3
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('SFcw'); return false;">
+HW0
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/index.html" class="no-external">To do this, we need several steps: 1. Import necessary libraries 2. Load data into Python 3. Separate data into X and Y 4. Visualize data using Scatterplot</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/index.html" class="no-external">
+<div class="listing-date">
+Jan 24, 2025
+</div>
+<div class="listing-author">
+Maureen Widjaja
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="bmV3cw==" data-listing-date-sort="1737446400000" data-listing-file-modified-sort="1737760371758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail">
+<p><a href="./posts/HW0/index.html" class="no-external"></a></p><a href="./posts/HW0/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/HW0/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/HW0/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/HW0/index.html" class="no-external">HW0</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/HW0/index.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
@@ -263,16 +329,16 @@ news
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">This is the first post in a Quarto blog. Welcome!</a>
+<a href="./posts/HW0/index.html" class="no-external">This is the first post in a Quarto blog. Welcome!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
+<a href="./posts/HW0/index.html" class="no-external">
 <div class="listing-date">
 Jan 21, 2025
 </div>
 <div class="listing-author">
-Tristan O’Malley
+Maureen Widjaja
 </div>
 </a>
 </div>
@@ -372,7 +438,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/maureenwidjaja\.github\.io\/HW0\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
