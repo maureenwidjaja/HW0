@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Creating posts",
     "section": "",
-    "text": "About this blog"
+    "text": "This blog is about visualizing Palmer Penguins Data Set."
   },
   {
     "objectID": "posts/hw0.html",
@@ -19,20 +19,6 @@
     "title": "PIC 16B, HW0",
     "section": "",
     "text": "import pandas as pd\nimport matplotlib.pyplot as plt\n\n\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\n\n\npenguins.head()\n\n\n\n\n\n\n\n\nstudyName\nSample Number\nSpecies\nRegion\nIsland\nStage\nIndividual ID\nClutch Completion\nDate Egg\nCulmen Length (mm)\nCulmen Depth (mm)\nFlipper Length (mm)\nBody Mass (g)\nSex\nDelta 15 N (o/oo)\nDelta 13 C (o/oo)\nComments\n\n\n\n\n0\nPAL0708\n1\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A1\nYes\n11/11/07\n39.1\n18.7\n181.0\n3750.0\nMALE\nNaN\nNaN\nNot enough blood for isotopes.\n\n\n1\nPAL0708\n2\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A2\nYes\n11/11/07\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n8.94956\n-24.69454\nNaN\n\n\n2\nPAL0708\n3\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A1\nYes\n11/16/07\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n8.36821\n-25.33302\nNaN\n\n\n3\nPAL0708\n4\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A2\nYes\n11/16/07\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAdult not sampled.\n\n\n4\nPAL0708\n5\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN3A1\nYes\n11/16/07\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n8.76651\n-25.32426\nNaN\n\n\n\n\n\n\n\n\n\n\nalt text\n\n\n\nA bird (probably not a penguin) getting its culmen length measured\n\n\n(Source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MeasureBeakThrush.jpg/960px-MeasureBeakThrush.jpg)\n\n\nX = penguins[\"Culmen Length (mm)\"]\ny = penguins[\"Culmen Depth (mm)\"]\n\n\nfig, ax = plt.subplots(1)\nax.set(xlabel = \"Culmen Length (mm)\", \n       ylabel = \"Culmen Depth (mm)\",\n       title = \"Culmen Length vs Culmen Depth\")\n\n[Text(0.5, 0, 'Culmen Length (mm)'),\n Text(0, 0.5, 'Culmen Depth (mm)'),\n Text(0.5, 1.0, 'Culmen Length vs Culmen Depth')]\n\n\n\n\n\n\n\n\n\n\nspecies = set(penguins[\"Species\"])\nfor s in species:\n    sub = penguins[penguins[\"Species\"] == s]\n    ax.scatter(sub[\"Culmen Length (mm)\"], sub[\"Culmen Depth (mm)\"], label = s.split(' ')[0], alpha = 0.5)\n\n\nax.legend()\nfig"
-  },
-  {
-    "objectID": "posts/HW0/index.html",
-    "href": "posts/HW0/index.html",
-    "title": "HW0",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
   },
   {
     "objectID": "posts/index.html",
@@ -72,8 +58,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "myblog",
+    "title": "Maureen’s Palmer Penguins Blog",
     "section": "",
-    "text": "PIC 16B, HW0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nCreating posts\n\n\n\n\n\n\nWeek 3\n\n\nHW0\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\n\n\n\n\n\n\nHW0\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 21, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\nNo matching items"
+    "text": "PIC 16B, HW0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating posts\n\n\n\n\n\n\nWeek 3\n\n\nHW0\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\nNo matching items"
   }
 ]

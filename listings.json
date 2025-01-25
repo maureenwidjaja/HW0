@@ -3,9 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/hw0.html",
-      "/posts/post-with-code/index.html",
-      "/posts/index.html",
-      "/posts/HW0/index.html"
+      "/posts/index.html"
     ]
   }
 ]
