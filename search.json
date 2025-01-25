@@ -2,50 +2,50 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Creating posts",
+    "title": "Data Visualization Using Python",
     "section": "",
     "text": "This blog is about visualizing Palmer Penguins Data Set."
   },
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
-    "title": "Palmer Penguins Data Set Visualization",
+    "title": "Palmer Penguins Data Set Visualization Tutorial",
     "section": "",
-    "text": "To do this, we need several steps:"
+    "text": "This is a tutorial on how to visualize the Palmer Penguins Data Set.\nTo do this, we need several steps:"
   },
   {
     "objectID": "posts/index.html#step-1-import-necessary-libraries",
     "href": "posts/index.html#step-1-import-necessary-libraries",
-    "title": "Palmer Penguins Data Set Visualization",
+    "title": "Palmer Penguins Data Set Visualization Tutorial",
     "section": "Step 1: Import necessary libraries",
-    "text": "Step 1: Import necessary libraries\nThe pandas library is primarily used for data manipulation and analysis, while the matplotlib library works well with NumPy and Pandas to visualize data directly. Run the cell below to load the penguin dataset as a pandas DataFrame called penguins.\nimport pandas as pd\nimport matplotlib.pyplot as plt"
+    "text": "Step 1: Import necessary libraries\nThe Pandas library is primarily used for data manipulation and analysis, while the matplotlib library works well with NumPy and Pandas to visualize data directly.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt"
   },
   {
     "objectID": "posts/index.html#step-2-load-data-into-python",
     "href": "posts/index.html#step-2-load-data-into-python",
-    "title": "Palmer Penguins Data Set Visualization",
+    "title": "Palmer Penguins Data Set Visualization Tutorial",
     "section": "Step 2: Load data into Python",
-    "text": "Step 2: Load data into Python\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\nAfter loading the data, we want to check that our data was read in correctly. To do this and to see what the dataset looks like, run the next cell. We use the head() function to show the first several lines incase the data set is very long.\npenguins.head()"
+    "text": "Step 2: Load data into Python\nRun the cell below to load the penguin dataset as a pandas DataFrame called penguins.\n\nurl = \"https://raw.githubusercontent.com/pic16b-ucla/24W/main/datasets/palmer_penguins.csv\"\npenguins = pd.read_csv(url)\n\nAfter loading the data, we want to check that our data was read correctly. To do this and to see what the dataset looks like, run the next cell. We use the head() function to show the first several lines incase the data set is very long.\n\n\npenguins.head()\n\n\n\n\n\n\n\n\nstudyName\nSample Number\nSpecies\nRegion\nIsland\nStage\nIndividual ID\nClutch Completion\nDate Egg\nCulmen Length (mm)\nCulmen Depth (mm)\nFlipper Length (mm)\nBody Mass (g)\nSex\nDelta 15 N (o/oo)\nDelta 13 C (o/oo)\nComments\n\n\n\n\n0\nPAL0708\n1\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A1\nYes\n11/11/07\n39.1\n18.7\n181.0\n3750.0\nMALE\nNaN\nNaN\nNot enough blood for isotopes.\n\n\n1\nPAL0708\n2\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN1A2\nYes\n11/11/07\n39.5\n17.4\n186.0\n3800.0\nFEMALE\n8.94956\n-24.69454\nNaN\n\n\n2\nPAL0708\n3\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A1\nYes\n11/16/07\n40.3\n18.0\n195.0\n3250.0\nFEMALE\n8.36821\n-25.33302\nNaN\n\n\n3\nPAL0708\n4\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN2A2\nYes\n11/16/07\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nAdult not sampled.\n\n\n4\nPAL0708\n5\nAdelie Penguin (Pygoscelis adeliae)\nAnvers\nTorgersen\nAdult, 1 Egg Stage\nN3A1\nYes\n11/16/07\n36.7\n19.3\n193.0\n3450.0\nFEMALE\n8.76651\n-25.32426\nNaN"
   },
   {
     "objectID": "posts/index.html#step-3-separate-data-into-x-and-y",
     "href": "posts/index.html#step-3-separate-data-into-x-and-y",
-    "title": "Palmer Penguins Data Set Visualization",
+    "title": "Palmer Penguins Data Set Visualization Tutorial",
     "section": "Step 3: Separate data into X and Y",
-    "text": "Step 3: Separate data into X and Y\nSince we wish to create a scatter plot to model the penguin’s Culmen Length vs Culmen Depth, we need to separate which column is going to be in the x-axis and y-axis.\nX = penguins[\"Culmen Length (mm)\"]\ny = penguins[\"Culmen Depth (mm)\"]"
+    "text": "Step 3: Separate data into X and Y\nSince we wish to create a scatter plot to model the penguin’s Culmen Length against Culmen Depth, we need to separate which column is going to be in the x-axis and y-axis.\n\nX = penguins[\"Culmen Length (mm)\"]\ny = penguins[\"Culmen Depth (mm)\"]"
   },
   {
     "objectID": "posts/index.html#step-4-visualize-data-using-scatterplot",
     "href": "posts/index.html#step-4-visualize-data-using-scatterplot",
-    "title": "Palmer Penguins Data Set Visualization",
+    "title": "Palmer Penguins Data Set Visualization Tutorial",
     "section": "Step 4: Visualize data using Scatterplot",
-    "text": "Step 4: Visualize data using Scatterplot\n\n\n\nalt text\n\n\n\nA bird (probably not a penguin) getting its culmen length measured\n\n\n(Source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MeasureBeakThrush.jpg/960px-MeasureBeakThrush.jpg)\n\nFirst let us create an empty figure and label the axes. We want to turn the plot into a scatterplot of the penguin’s culmen length against culmen depth.\nfig, ax = plt.subplots(1)\nax.set(xlabel = \"Culmen Length (mm)\", \n       ylabel = \"Culmen Depth (mm)\",\n       title = \"Culmen Length vs Culmen Depth\")\nOur point in our scatterplot corresponds to one penguin’s culmen length and depth. To create the scatter plot, we will extract the unique species names from the Species column of the penguins data frame and ensure that each species appears only once by using the set function. We then iterate through through each unique species using a for loop.\nIn the scatter function, we then pass a short name for each species to an argument named label and a value of 0.5 for an argument named alpha which makes the points translucent. Run the cell code below.\nspecies = set(penguins[\"Species\"])\nfor s in species:\n    sub = penguins[penguins[\"Species\"] == s]\n    ax.scatter(sub[\"Culmen Length (mm)\"], sub[\"Culmen Depth (mm)\"], label = s.split(' ')[0], alpha = 0.5)\nFinally, run the next cell to add a legend and show our scatterplot. The plot will show different colors for different species.\nax.legend()\nfig\nCongrats! You have just made your first scatterplot!"
+    "text": "Step 4: Visualize data using Scatterplot\n\n\n\nalt text\n\n\n\nA bird (probably not a penguin) getting its culmen length measured\n\nSource:\n\nMeasureBeakThrush\nFirst let us create an empty figure and label the axes. We want to turn the plot into a scatterplot of the penguin’s Culmen Length against Culmen Depth.\n\nfig, ax = plt.subplots(1)\nax.set(xlabel = \"Culmen Length (mm)\", \n       ylabel = \"Culmen Depth (mm)\",\n       title = \"Culmen Length vs Culmen Depth\")\n\n[Text(0.5, 0, 'Culmen Length (mm)'),\n Text(0, 0.5, 'Culmen Depth (mm)'),\n Text(0.5, 1.0, 'Culmen Length vs Culmen Depth')]\n\n\n\n\n\n\n\n\n\nOur point in our scatterplot corresponds to one penguin’s culmen length and depth. To create the scatter plot, we will extract the unique species names from the Species column of the penguins data frame and ensure that each species appears only once by using the set function. We then iterate through through each unique species using a for loop.\nIn the scatter function, we then pass a short name for each species to an argument named label and a value of 0.5 for an argument named alpha which makes the points translucent. Run the cell code below.\n\nspecies = set(penguins[\"Species\"])\nfor s in species:\n    sub = penguins[penguins[\"Species\"] == s]\n    ax.scatter(sub[\"Culmen Length (mm)\"], sub[\"Culmen Depth (mm)\"], label = s.split(' ')[0], alpha = 0.5)\n\nFinally, run the next cell to add a legend and show our scatterplot. The plot will show different colors for different species.\n\nax.legend()\nfig\n\n\n\n\n\n\n\n\nCongrats! You have just made your first scatterplot!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Tutorial Blog of Data visualization for The Palmer Penguins Data Set",
     "section": "",
-    "text": "Palmer Penguins Data Set Visualization\n\n\n\n\n\n\nWeek 3\n\n\nHW0\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\nNo matching items"
+    "text": "Palmer Penguins Data Set Visualization Tutorial\n\n\n\n\n\n\nWeek 3\n\n\nHW0\n\n\n\n\n\n\n\n\n\nJan 24, 2025\n\n\nMaureen Widjaja\n\n\n\n\n\n\nNo matching items"
   }
 ]
